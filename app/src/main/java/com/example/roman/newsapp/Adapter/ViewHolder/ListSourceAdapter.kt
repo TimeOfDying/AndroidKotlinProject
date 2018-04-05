@@ -33,6 +33,7 @@ class ListSourceAdapter(private val context: Context, private val webSite: WebSi
         {
             override fun onClick(view: View, position: Int) {
                 val intent = Intent(context, ListNews::class.java)
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 intent.putExtra("source", webSite.sources!![position].id)
                 context.startActivity(intent)
             }

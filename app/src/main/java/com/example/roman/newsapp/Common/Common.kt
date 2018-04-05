@@ -5,7 +5,7 @@ import com.example.roman.newsapp.Remote.RetrofitClient
 import retrofit2.Retrofit
 
 object Common {
-    val BASE_URL = "https://newsapi.org/"
+    val BASE_URL = "http://newsapi.org/"
     val API_KEY = "a746b47fc0784f21ba96743a4010039d"
 
     val newService:NewsService
@@ -13,7 +13,7 @@ object Common {
 
     fun getNewsAPI(source:String):String
     {
-        val apiUrl = StringBuilder("https://newsapi.org/v2/top-headlines?sources=")
+        val apiUrl = StringBuilder("http://newsapi.org/v2/top-headlines?sources=")
                 .append(source)
                 .append("&apiKey=")
                 .append(API_KEY)

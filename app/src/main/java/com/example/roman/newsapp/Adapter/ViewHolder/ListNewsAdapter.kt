@@ -61,6 +61,7 @@ class ListNewsAdapter(val articleList:MutableList<Article>,private val context: 
         holder.setItemClickListener(object : ItemClickListener{
             override fun onClick(view: View, position: Int) {
                 val detail = Intent(context,NewsDetail::class.java)
+                detail.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                 detail.putExtra("webUrl",articleList[position].url)
                 context.startActivity(detail)
             }
