@@ -1,4 +1,4 @@
-package com.example.roman.androidkotlinproject
+package com.example.roman.newsapp
 
 import org.junit.Test
 
